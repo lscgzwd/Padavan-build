@@ -48,11 +48,11 @@ jobs:
     - name: Replace go 1.14 to 1.15
       run: |
         cd /opt/hostedtoolcache/go
-        rm -rf /opt/hostedtoolcache/go/1.14.12
-        cp -rf 1.15.6 1.14.12
+        rm -rf /opt/hostedtoolcache/go/1.14.13
+        cp -rf 1.15.6 1.14.13
     - name: Build Firmware
       env:
-        TNAME: K2P-5.0
+        TNAME: K2P_nano-5.0
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
